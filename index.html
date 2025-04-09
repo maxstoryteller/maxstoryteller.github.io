@@ -15,15 +15,16 @@
     <h1 class="logo-text">MAX STORYTELLER</h1>
     <div class="spinning-disc"></div>
     <p class="start-btn" onclick="startSite()">PRESS START TO CUT</p>
-    <audio id="player" preload="auto" autoplay>
+    <audio id="player" preload="auto" autoplay loop>
       <source src="music/track.mp3" type="audio/mpeg">
+       Your browser does not support the audio element.
     </audio>
   </section>
 
   <!-- ГЛАВНАЯ СТРАНИЦА -->
   <div id="main" style="display: none;">
-    <video autoplay muted loop playsinline>
-      <source src="video.mp4" type="video/mp4">
+    <video id="main-video" autoplay muted loop playsinline>
+        <!-- Источник будет добавлен через JavaScript -->
     </video>
 
     <div class="top-left">
