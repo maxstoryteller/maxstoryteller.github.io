@@ -1,19 +1,17 @@
 @font-face {
     font-family: 'MaxFont';
     src: url('fonts/maxfont.ttf') format('truetype');
-}
-
-html, body {
+  }
+  
+  body {
     margin: 0;
-    padding: 0;
-    background: black;
-    overflow: hidden;
-    font-family: 'MaxFont', monospace;
-    color: white;
-}
-
-/* ИНТРО */
-#intro {
+    font-family: 'MaxFont', sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* ИНТРО */
+  #intro {
     position: fixed;
     top: 0;
     left: 0;
@@ -25,101 +23,134 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.logo-text {
-    font-size: 4em;
-    color: #fff;
-    text-shadow: 0 0 8px #ff00cc;
-    margin-bottom: 30px;
+  }
+  
+  .logo-text {
+    font-size: 3em;
     text-align: center;
-}
-
-.spinning-disc {
-    width: 180px;
-    height: 180px;
-    margin: 20px 0;
+    margin-top: 20vh;
+  }
+  
+  .spinning-disc {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
     border-radius: 50%;
-    background: url('images/disc.png') no-repeat center center/cover;
-    animation: spin 3s linear infinite;
-}
-
-@keyframes spin {
+    margin: 20px auto;
+    animation: spin 4s linear infinite;
+    cursor: pointer;
+  }
+  
+  @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
-}
-
-.start-btn {
+  }
+  
+  .start-btn {
+    display: block;
+    text-align: center;
     margin-top: 20px;
-    font-size: 1.2em;
-    color: #aaa;
-    background: none;
-    border: none;
     cursor: pointer;
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-/* ГЛАВНАЯ СТРАНИЦА */
-#main {
+    font-size: 1.5em;
+  }
+  
+  /* ГЛАВНАЯ СТРАНИЦА */
+  #main {
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 1;
-}
-
-#main video {
+    text-align: center;
+  }
+  
+  #main video {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.top-left {
+  }
+  
+  .top-left {
     position: absolute;
     top: 20px;
     left: 20px;
     z-index: 2;
-}
-
-.nav-btn {
-    width: 160px;
-    margin-bottom: 12px;
-    transition: transform 0.2s ease;
-    display: block;
-}
-
-.nav-btn:hover {
-    transform: scale(1.05);
-}
-
-/* iPod */
-.ipod-player {
+  }
+  
+  .top-right {
     position: absolute;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
-    width: 140px;
-    background: #111;
-    border: 2px solid #555;
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 0.75em;
     z-index: 2;
-}
-
-.ipod-player img {
+  }
+  
+  .nav-btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .nav-btn:hover,
+  .nav-btn:active {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* iPod */
+  .ipod-player {
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .ipod-image {
+    width: 100px;
+  }
+  
+  .track-cover {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 108px;
+    height: 80px;
+    overflow: hidden;
+    z-index: 3;
+    background: black;
+  }
+  
+  .track-cover img {
     width: 100%;
-    border-radius: 6px;
-}
-
-.ipod-player .track {
-    margin-top: 8px;
+  }
+  
+  .track-info {
+    display: none;
+  }
+  
+  .track {
+    font-size: 0.4em;
     color: #fff;
-} 
+    text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .controls {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  
+  .control-btn {
+    width: 15px;
+    height: 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  .control-btn:hover {
+    opacity: 0.3;
+  }
+  
