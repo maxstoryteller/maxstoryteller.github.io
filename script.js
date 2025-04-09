@@ -36,37 +36,11 @@ function playAudioOnClick() {
 
 // Функция запуска сайта и выбора случайного видео
 function startSite() {
-    const introSection = document.getElementById("intro");
-    const mainSection = document.getElementById("main");
-    const videoElement = document.getElementById("main-video");
-    const coverImage = document.getElementById("cover");
-
-    if (!introSection || !mainSection || !videoElement || !coverImage) {
-        console.error("Required elements not found!");
-        return;
-    }
-
-    introSection.style.display = "none";
-    mainSection.style.display = "block";
-
-    const randomIndex = Math.floor(Math.random() * videoSources.length);
-    const randomVideoSrc = videoSources[randomIndex];
-
-    while (videoElement.firstChild) {
-        videoElement.removeChild(videoElement.firstChild);
-    }
-    const sourceElement = document.createElement('source');
-    sourceElement.src = randomVideoSrc;
-    sourceElement.type = 'video/mp4';
-    videoElement.appendChild(sourceElement);
-
-    videoElement.load();
-    videoElement.play().catch(error => {
-        console.log("Video autoplay prevented:", error);
-        document.addEventListener('click', playVideoOnClick, { once: true });
-    });
-
-    coverImage.src = track.cover;
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("main").style.display = "block";
+    
+    document.getElementById("cover").src = "images/cover1.jpg";
+    document.getElementById("track-info").textContent = "Funk Cut – Unknown Artist";
 }
 
 function playVideoOnClick() {
