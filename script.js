@@ -30,17 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initAudio();
     // Устанавливаем обложку сразу при загрузке
     document.getElementById("cover").src = track.cover;
-
-    const video = document.querySelector('#main video');
-    let isFirstPlay = true;
-
-    video.addEventListener('ended', function() {
-        if (isFirstPlay) {
-            isFirstPlay = false;
-        }
-        video.currentTime = isFirstPlay ? 0 : 2;
-        video.play();
-    });
 });
 
 // Добавляем обработчики для клавиш (опционально)

@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>MAX STORYTELLER</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="MAX STORYTELLER - Professional storytelling services">
+  <meta name="theme-color" content="#000000">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -13,34 +15,35 @@
     <h1 class="logo-text">MAX STORYTELLER</h1>
     <div class="spinning-disc"></div>
     <p class="start-btn" onclick="startSite()">PRESS START TO CUT</p>
+    <audio id="player" preload="auto" autoplay>
+      <source src="music/track.mp3" type="audio/mpeg">
+    </audio>
   </section>
 
   <!-- ГЛАВНАЯ СТРАНИЦА -->
-  <div id="main">
-    <video autoplay muted loop>
+  <div id="main" style="display: none;">
+    <video autoplay muted loop playsinline>
       <source src="video.mp4" type="video/mp4">
     </video>
 
     <div class="top-left">
-      <a href="https://www.instagram.com/maxstoryteller" target="_blank">
-        <img src="images/instagram-btn.png" alt="Instagram" class="nav-btn">
+      <a href="https://www.instagram.com/maxstoryteller" target="_blank" aria-label="Instagram">
+        <img src="images/instagram-btn.png" alt="Instagram" class="nav-btn" loading="lazy">
       </a>
     </div>
 
     <div class="top-right">
-      <a href="https://n1346976.alteg.io/" target="_blank">
-        <img src="images/booknow-btn.png" alt="Book Now" class="nav-btn">
+      <a href="https://n1346976.alteg.io/" target="_blank" aria-label="Book Now">
+        <img src="images/booknow-btn.png" alt="Book Now" class="nav-btn" loading="lazy">
       </a>
     </div>
 
     <div class="ipod-player">
-      <img src="images/ipod.png" alt="iPod" class="ipod-image">
+      <img src="images/ipod.png" alt="iPod" class="ipod-image" loading="lazy">
       <div class="track-cover">
         <img id="cover" src="" alt="Track Cover">
       </div>
     </div>
   </div>
-
-  <audio id="player"></audio>
 </body>
 </html>
