@@ -74,7 +74,13 @@
   }
   
   .nav-btn {
-    /* Удалены анимации и эффекты */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .nav-btn:hover,
+  .nav-btn:active {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   /* iPod */
