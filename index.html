@@ -1,50 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MAX STORYTELLER</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="MAX STORYTELLER - Professional storytelling services">
-  <meta name="theme-color" content="#000000">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <title>MAX STORYTELLER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- ИНТРО -->
-  <section id="intro">
-    <h1 class="logo-text">MAX STORYTELLER</h1>
-    <div class="spinning-disc" id="spinning-disc" onclick="startSite()"></div>
-    <p class="start-btn" onclick="startSite()">PRESS START TO CUT</p>
-    <audio id="player" preload="auto" autoplay loop>
-      <source src="music/track.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-  </section>
+    <!-- ИНТРО -->
+    <section id="intro">
+        <h1 class="logo-text">MAX STORYTELLER</h1>
+        <div class="spinning-disc"></div>
+        <p class="start-btn" onclick="startSite()">PRESS START TO CUT</p>
+    </section>
 
-  <!-- ГЛАВНАЯ СТРАНИЦА -->
-  <div id="main" style="display: none;">
-    <video id="main-video" autoplay muted loop playsinline>
-        <!-- Источник будет добавлен через JavaScript -->
-    </video>
+    <!-- ГЛАВНАЯ СТРАНИЦА -->
+    <div id="main">
+        <video autoplay muted loop>
+            <source src="video.mp4" type="video/mp4">
+        </video>
 
-    <div class="top-left">
-      <a href="https://www.instagram.com/maxstoryteller" target="_blank" aria-label="Instagram">
-        <img src="images/instagram-btn.png" alt="Instagram" class="nav-btn" loading="lazy">
-      </a>
+        <div class="top-left">
+            <a href="https://www.instagram.com/maxstoryteller" target="_blank">
+                <img src="images/instagram-btn.png" alt="Instagram" class="nav-btn">
+            </a>
+            <a href="https://n1346976.alteg.io/" target="_blank">
+                <img src="images/booknow-btn.png" alt="Book Now" class="nav-btn">
+            </a>
+        </div>
+
+        <div class="ipod-player">
+            <img id="cover" src="images/cover1.jpg" alt="Track Cover">
+            <div class="track" id="track-info">Funk Cut – Unknown Artist</div>
+        </div>
     </div>
 
-    <div class="top-right">
-      <a href="https://n1346976.alteg.io/" target="_blank" aria-label="Book Now">
-        <img src="images/booknow-btn.png" alt="Book Now" class="nav-btn" loading="lazy">
-      </a>
-    </div>
-
-    <div class="ipod-player" onclick="toggleAudio()">
-      <img src="images/ipod.png" alt="iPod" class="ipod-image" loading="lazy">
-      <div class="track-cover">
-        <img id="cover" src="images/covers/cover.jpeg" alt="Track Cover">
-      </div>
-    </div>
-  </div>
+    <audio id="player" autoplay loop></audio>
 </body>
-</html>
+</html> 
