@@ -84,15 +84,3 @@ document.addEventListener('DOMContentLoaded', function() {
         spinningDisc.addEventListener('click', startSite);
     }
 });
-
-// Добавляем обработчики для клавиш (опционально)
-document.addEventListener('keydown', (e) => {
-    if (document.getElementById("main").style.display === "block") {
-        if (e.code === "ArrowRight") {
-            playNextTrack();
-        } else if (e.code === "ArrowLeft") {
-            playPreviousTrack();
-        }
-    }
-});
-  
