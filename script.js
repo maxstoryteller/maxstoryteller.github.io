@@ -76,6 +76,16 @@ function playVideoOnClick() {
     }
 }
 
+function toggleAudio() {
+    if (audioPlayer) {
+        if (audioPlayer.paused) {
+            audioPlayer.play().catch(e => console.log("Audio play error:", e));
+        } else {
+            audioPlayer.pause();
+        }
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     initAudio();
 

@@ -5,7 +5,7 @@
   
   body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'MaxFont', sans-serif;
     background-color: #000;
     color: #fff;
   }
@@ -26,7 +26,7 @@
   }
   
   .logo-text {
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
     margin-top: 20vh;
   }
@@ -37,6 +37,13 @@
     background-color: #fff;
     border-radius: 50%;
     margin: 20px auto;
+    animation: spin 4s linear infinite;
+    cursor: pointer;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
   
   .start-btn {
@@ -44,6 +51,7 @@
     text-align: center;
     margin-top: 20px;
     cursor: pointer;
+    font-size: 1.5em;
   }
   
   /* ГЛАВНАЯ СТРАНИЦА */
@@ -86,6 +94,7 @@
   /* iPod */
   .ipod-player {
     margin-top: 20px;
+    cursor: pointer;
   }
   
   .ipod-image {

@@ -13,7 +13,7 @@
   <!-- ИНТРО -->
   <section id="intro">
     <h1 class="logo-text">MAX STORYTELLER</h1>
-    <div class="spinning-disc" id="spinning-disc"></div>
+    <div class="spinning-disc" id="spinning-disc" onclick="startSite()"></div>
     <p class="start-btn" onclick="startSite()">PRESS START TO CUT</p>
     <audio id="player" preload="auto" autoplay loop>
       <source src="music/track.mp3" type="audio/mpeg">
@@ -39,10 +39,10 @@
       </a>
     </div>
 
-    <div class="ipod-player">
+    <div class="ipod-player" onclick="toggleAudio()">
       <img src="images/ipod.png" alt="iPod" class="ipod-image" loading="lazy">
       <div class="track-cover">
-        <img id="cover" src="" alt="Track Cover">
+        <img id="cover" src="images/covers/cover.jpeg" alt="Track Cover">
       </div>
     </div>
   </div>
