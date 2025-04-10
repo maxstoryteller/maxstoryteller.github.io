@@ -1,7 +1,6 @@
 // Информация о треке
 const track = {
-    audio: "music/track.mp3",
-    cover: "images/covers/cover.png" // Обложка
+    audio: "music/track.mp3"
 };
 
 // Список видеофайлов
@@ -38,7 +37,6 @@ function startSite() {
     const introSection = document.getElementById("intro");
     const mainSection = document.getElementById("main");
     const videoElement = document.getElementById("main-video");
-    const coverImage = document.getElementById("cover");
 
     introSection.style.display = "none";
     mainSection.style.display = "block";
@@ -59,8 +57,6 @@ function startSite() {
         console.log("Video autoplay prevented:", error);
         document.body.addEventListener('click', playVideoOnClick, { once: true });
     });
-
-    coverImage.src = track.cover; // Убедитесь, что путь к обложке правильный
 }
 
 function playVideoOnClick() {
@@ -82,7 +78,7 @@ function toggleAudio() {
 
 document.addEventListener('DOMContentLoaded', function() {
     initAudio();
-    const ipodPlayerElement = document.querySelector('.ipod-player');
+    const ipodPlayerElement = document.querySelector('.ipod');
     if (ipodPlayerElement) {
         ipodPlayerElement.addEventListener('click', toggleAudio);
     }

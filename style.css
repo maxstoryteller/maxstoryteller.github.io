@@ -105,29 +105,26 @@ html, body {
     display: block;
 }
 
-.ipod-player {
+.ipod {
     position: absolute;
     bottom: 20px;
     right: 20px;
     width: 140px;
-    background: #111;
-    border: 2px solid #555;
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 0.75em;
     z-index: 2;
     cursor: pointer;
 }
 
-.ipod-player img {
+.ipod img {
     width: 100%;
-    border-radius: 6px;
     display: block;
 }
 
-.ipod-player .track {
-    margin-top: 8px;
-    color: #fff;
-    text-align: center;
+.cover {
+    position: absolute;
+    top: 10%; /* Позиция обложки внутри iPod */
+    left: 10%; /* Позиция обложки внутри iPod */
+    width: 80%; /* Размер обложки */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    border-radius: 6px; /* Закругленные углы */
 }
   
