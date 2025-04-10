@@ -1,12 +1,12 @@
 // Информация о треке
 const track = {
     audio: "music/track.mp3",
-    cover: "images/ipod.png" // Обложка iPod
+    cover: "images/covers/cover.png" // Обложка
 };
 
 // Список видеофайлов
 const videoSources = [
-    "video1.mp4", // Названия видео
+    "video1.mp4",
     "video2.mp4",
     "video3.mp4"
 ];
@@ -39,12 +39,6 @@ function startSite() {
     const mainSection = document.getElementById("main");
     const videoElement = document.getElementById("main-video");
     const coverImage = document.getElementById("cover");
-    const trackInfo = document.getElementById("track-info");
-
-    if (!introSection || !mainSection || !videoElement || !coverImage || !trackInfo) {
-        console.error("Required elements not found for startSite!");
-        return;
-    }
 
     introSection.style.display = "none";
     mainSection.style.display = "block";
@@ -66,7 +60,7 @@ function startSite() {
         document.body.addEventListener('click', playVideoOnClick, { once: true });
     });
 
-    coverImage.src = track.cover;
+    coverImage.src = track.cover; // Убедитесь, что путь к обложке правильный
 }
 
 function playVideoOnClick() {
