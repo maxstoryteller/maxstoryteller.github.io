@@ -44,19 +44,22 @@ function startSite() {
     const randomIndex = Math.floor(Math.random() * videoSources.length);
     const randomVideoSrc = videoSources[randomIndex];
 
-    while (videoElement.firstChild) {
-        videoElement.removeChild(videoElement.firstChild);
-    }
-    const sourceElement = document.createElement('source');
-    sourceElement.src = randomVideoSrc;
-    sourceElement.type = 'video/mp4';
-    videoElement.appendChild(sourceElement);
+    // Убедитесь, что видео загружается только на второй странице
+    if (videoElement) {
+        while (videoElement.firstChild) {
+            videoElement.removeChild(videoElement.firstChild);
+        }
+        const sourceElement = document.createElement('source');
+        sourceElement.src = randomVideoSrc;
+        sourceElement.type = 'video/mp4';
+        videoElement.appendChild(sourceElement);
 
-    videoElement.load();
-    videoElement.play().catch(error => {
-        console.log("Video autoplay prevented:", error);
-        document.body.addEventListener('click', playVideoOnClick, { once: true });
-    });
+        videoElement.load();
+        videoElement.play().catch(error => {
+            console.log("Video autoplay prevented:", error);
+            document.body.addEventListener('click', playVideoOnClick, { once: true });
+        });
+    }
 }
 
 function playVideoOnClick() {
