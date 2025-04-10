@@ -1,14 +1,14 @@
 // Информация о треке
 const track = {
     audio: "music/track.mp3",
-    cover: "images/covers/cover1.jpeg"
+    cover: "images/ipod.png" // Обложка iPod
 };
 
 // Список видеофайлов
 const videoSources = [
-    "videos/video1.mp4",
-    "videos/video2.mp4",
-    "videos/video3.mp4"
+    "video1.mp4", // Названия видео
+    "video2.mp4",
+    "video3.mp4"
 ];
 
 let audioPlayer = null;
