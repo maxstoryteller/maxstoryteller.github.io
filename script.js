@@ -37,7 +37,7 @@ function playAudioOnClick() {
 function startSite() {
     const introSection = document.getElementById("intro");
     const mainSection = document.getElementById("main");
-    const videoElement = mainSection.querySelector("video");
+    const videoElement = document.getElementById("main-video");
     const coverImage = document.getElementById("cover");
     const trackInfo = document.getElementById("track-info");
 
@@ -70,7 +70,7 @@ function startSite() {
 }
 
 function playVideoOnClick() {
-    const videoElement = document.querySelector("#main video");
+    const videoElement = document.getElementById("main-video");
     if (videoElement && videoElement.paused) {
         videoElement.play().catch(e => console.log("Video play error after click:", e));
     }

@@ -92,6 +92,13 @@ html, body {
     z-index: 2;
 }
 
+.top-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
 .nav-btn {
     width: 160px;
     margin-bottom: 12px;
